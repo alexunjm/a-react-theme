@@ -1,0 +1,9 @@
+@mixin important-text {
+  color: $myColor;
+  font-size: 25px;
+  font-weight: bold;;
+}
+
+@mixin bordered($width, $color, $style: solid) {
+  border: $width $style $color;
+}

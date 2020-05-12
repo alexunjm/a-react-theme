@@ -1,0 +1,21 @@
+
+// Sistema de colores
+
+$dark:    #000000;
+$white:    #fefefe;
+
+$gray-scale-deg: 10;
+
+$gray: ("gray-0": $white);
+$deg: 100;
+@while $deg > 0 {
+  $deg: $deg - $gray-scale-deg;
+  $gray-scale: darken($white, $deg);
+  $gray: map-merge($gray, (gray-#{$deg}: $gray-scale));
+}
+
+@each $color, $value in $gray {
+  .color-#{$color} {
+    color: $value;
+  }
+}

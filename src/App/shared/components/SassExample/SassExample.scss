@@ -1,0 +1,71 @@
+@import "colors";
+@import "mixins";
+
+$myFont: Helvetica, sans-serif;
+$myFontSize: 18px;
+$myWidth: 680px;
+
+body {
+  font-family: $myFont;
+  font-size: $myFontSize;
+  color: $myColor;
+}
+
+#container {
+  width: $myWidth;
+  @include important-text;
+  // @include bordered(2px, #ff8073)
+  // @include bordered(2px, #ff8073, dashed)
+  @include bordered($width: 2px, $color: #ff8073, $style: dashed);
+
+  .button-basic  {
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .button-report  {
+    @extend .button-basic;
+    background-color: $myColor;
+    color: $myColorInvert;
+  }
+  
+  .button-sample-red  {
+    @extend .button-basic;
+    background-color: $red;
+  }
+  .button-sample-green  {
+    @extend .button-basic;
+    background-color: $green;
+  }
+  .button-sample-blue  {
+    @extend .button-basic;
+    background-color: $blue;
+  }
+  .button-sample-main-l  {
+    @extend .button-basic;
+    background-color: $main-l;
+  }
+  .button-sample-main  {
+    @extend .button-basic;
+    background-color: $main;
+  }
+  .button-sample-main-d  {
+    @extend .button-basic;
+    background-color: $main-d;
+  }
+  .button-sample-mix-1  {
+    @extend .button-basic;
+    background-color: $mix2colors-1;
+  }
+  .button-sample-mix-5  {
+    @extend .button-basic;
+    background-color: $mix2colors-5;
+  }
+  .button-sample-mix-9  {
+    @extend .button-basic;
+    background-color: $mix2colors-9;
+  }
+}

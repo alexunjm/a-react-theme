@@ -1,0 +1,27 @@
+$myColor: #ff1800;
+$myColorInvert: complement($myColor);
+// $myColorInvert: invert($myColor);
+$myColorInvert: invert($myColor, 30%);
+
+$redCh: red($myColor);
+$greenCh: green($myColor);
+$blueCh: blue($myColor);
+
+$hueCh: hue($myColor);
+$saturationCh: saturation($myColor);
+$lightnessCh: lightness($myColor);
+
+$red: rgb($redCh, 255, 255);
+$green: rgb(255, $greenCh, 255);
+$blue: rgb(255, 255, $blueCh);
+
+$main-l: hsl($hueCh, $saturationCh, $lightnessCh + 25%);
+$main: hsl($hueCh, $saturationCh, $lightnessCh);
+$main-d: hsl($hueCh, $saturationCh, $lightnessCh - 25%);
+
+$color1: hsl($hueCh, max(100%, $saturationCh + 20%), $lightnessCh);
+$color2: adjust-hue($color1, 80deg);;
+
+$mix2colors-1: mix($color1, $color2, 10%);
+$mix2colors-5: mix($color1, $color2, 50%);
+$mix2colors-9: mix($color1, $color2, 90%);
