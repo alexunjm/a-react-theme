@@ -1,14 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
-import './style/default.scss';
 import './App.scss';
 
-import SassExample from './shared/components/SassExample';
+import Button from './shared/components/button';
 
 function App() {
   return (
     <div className="App">
-      <SassExample />
+      <Button>Hola</Button>
       <img src={logo} className="App-logo" alt="logo" />
     </div>
   );
