@@ -4,16 +4,18 @@
 $dark:    #000000;
 $white:    #fefefe;
 
-$gray-scale-deg: 10;
+// variables para escalas de grises (de 20 en 20)
+$gray-scale-deg: 20;
 
-$gray: ("gray-0": $white);
+$gray: ("gray-100": $dark);
 $deg: 100;
 @while $deg > 0 {
-  $deg: $deg - $gray-scale-deg;
   $gray-scale: darken($white, $deg);
   $gray: map-merge($gray, (gray-#{$deg}: $gray-scale));
+  $deg: $deg - $gray-scale-deg;
 }
 
+// escala de grises  (color-gray-20, ..., color-gray-100)
 @each $color, $value in $gray {
   .color-#{$color} {
     color: $value;
