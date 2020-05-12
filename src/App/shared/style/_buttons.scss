@@ -1,0 +1,42 @@
+
+@mixin contrast($color) {
+  $newColor: invert($color);
+  $light: lightness($color);
+  $satur: saturation($color);
+  @if $light < 60% {
+    // $light: +max($light, 40%);
+    $light: +50%;
+  } @else {
+    // $light: +min($light, 50%);
+    $light: -50%;
+  }
+  @if $satur > 40% {
+    $satur: -30%;
+  } @else {
+    $satur: +10%;
+  }
+  color: scale-color($newColor, $saturation: $satur, $lightness: $light);
+  // font-size: $light;
+  // color: $newColor;
+  /* 
+  @if $light < 50% {
+    color: scale-color($newColor, $saturation: -60, $lightness: -50%);
+  } @else {
+    color: scale-color($newColor, $saturation: -60, $lightness: +50%);
+  } */
+}
+
+.btn {
+  color: inherit;
+  font-weight: bold;
+
+  // default color classes
+  @each $color, $value in $colors {
+    &.btn-#{$color} {
+      background-color: $value;
+      // color: invert(grayscale($value));
+      // color: lighten(grayscale($value), 80);
+      @include contrast($value);
+    }
+  }
+}
