@@ -1,0 +1,11 @@
+
+@function contrast($color) {
+  $l: lightness($color);
+  // font-size: $l;
+  @if $l > 49% {
+    $color: map-get($map: $colors, $key: "dark");
+  } @else {
+    $color: map-get($map: $colors, $key: "light");
+  }
+  @return $color;
+}

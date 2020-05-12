@@ -1,5 +1,10 @@
-@import "colors";
-@import "mixins";
+@import "reset";
+@import "functions";
+@import "buttons";
+
+html {
+  @include main-color;
+}
 
 h2 {
   color: blue;

@@ -1,0 +1,23 @@
+
+
+.btn {
+  @include amaranth-font;
+  font-weight: bold;
+  border-radius: 0.3rem;
+  @include flex-centered;
+
+  // default color classes
+  @each $color, $value in $colors {
+    $contrast: contrast($value);
+    &.btn-#{$color} {
+      background-color: $value;
+      color: $contrast;
+      border: 2px solid $contrast;
+    }
+    &.btn-outline-#{$color} {
+      background-color: $contrast;
+      color: $value;
+      border: 2px solid $value;
+    }
+  }
+}

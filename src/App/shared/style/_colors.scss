@@ -1,10 +1,10 @@
 
-// Sistema de colores
+// Color System
 
-$dark-color:    #ff1800;
-$light-color:    #fefefe;
+$dark-color:  #353535;
+$light-color: #fefefe;
 
-// variables para escalas de grises (de 20 en 20)
+// scale variables
 
 $dark-scale-deg: 10;
 
@@ -15,10 +15,36 @@ $deg: 100;
   $dark: map-merge($dark, (#{$deg}: $dark-scale));
   $deg: $deg - $dark-scale-deg;
 }
+$dark: map-merge($dark, ("0": $light-color));
 
-// escala de grises  (color-dark-20, ..., color-dark-100)
+// default color classes
 @each $color, $value in $dark {
-  .color-#{$color} {
+  .darky-#{$color} {
     color: $value;
   }
 }
+
+
+$primary:       #875454;
+// $secondary:     map-get($map: $dark, $key: "80");
+// $secondary:     invert($primary);
+$secondary:     #875487;
+$tertiary:      #a8346a;
+$success:       hsl(120, 23%, 43%);
+$info:          hsl(190, 23%, 43%);
+$warning:       hsl(50, 63%, 43%);
+$danger:        hsl(354, 43%, 43%);
+// $light:         map-get($map: $dark, $key: "10");
+$light:         $light-color;
+
+$colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "tertiary":   $tertiary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark-color
+)

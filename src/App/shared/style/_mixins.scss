@@ -1,9 +1,21 @@
+@import "fonts";
+
+@mixin main-color {
+  color: map-get($map: $colors, $key: "secondary");
+}
+
 @mixin important-text {
   color: $myColor;
   font-size: 25px;
   font-weight: bold;;
 }
 
-@mixin bordered($width, $color, $style: solid) {
-  border: $width $style $color;
+@mixin flex-centered($inline: true) {
+  @if $inline {
+    display: inline-flex;
+  } @else {
+    display: flex;
+  }
+  justify-content: center;
+  align-items: center;
 }
