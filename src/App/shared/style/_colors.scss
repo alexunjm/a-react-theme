@@ -15,27 +15,32 @@ $deg: 100;
   $dark: map-merge($dark, (#{$deg}: $dark-scale));
   $deg: $deg - $dark-scale-deg;
 }
+$dark: map-merge($dark, ("0": $light-color));
 
 // default color classes
 @each $color, $value in $dark {
-  .gray-#{$color} {
+  .darky-#{$color} {
     color: $value;
   }
 }
 
 
-$primary:       #958E95;
+$primary:       #875454;
 // $secondary:     map-get($map: $dark, $key: "80");
-$secondary:     invert($primary);
-$success:       #54fa86;
-$info:          #54aafa;
-$warning:       #faac54;
-$danger:        #dc3545;
-$light:         map-get($map: $dark, $key: "10");
+// $secondary:     invert($primary);
+$secondary:     #875487;
+$tertiary:      #a8346a;
+$success:       hsl(120, 23%, 43%);
+$info:          hsl(190, 23%, 43%);
+$warning:       hsl(50, 63%, 43%);
+$danger:        hsl(354, 43%, 43%);
+// $light:         map-get($map: $dark, $key: "10");
+$light:         $light-color;
 
 $colors: (
   "primary":    $primary,
   "secondary":  $secondary,
+  "tertiary":   $tertiary,
   "success":    $success,
   "info":       $info,
   "warning":    $warning,

@@ -11,10 +11,10 @@
 }
 
 .btn {
+  @include amaranth-font;
   font-weight: bold;
   border-radius: 0.3rem;
   @include flex-centered;
-  display: inline-block;
 
   // default color classes
   @each $color, $value in $colors {

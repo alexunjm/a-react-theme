@@ -1,3 +1,4 @@
+@import "fonts";
 
 @mixin main-color {
   color: map-get($map: $colors, $key: "secondary");
@@ -9,8 +10,12 @@
   font-weight: bold;;
 }
 
-@mixin flex-centered {
-  display: flex;
+@mixin flex-centered($inline: true) {
+  @if $inline {
+    display: inline-flex;
+  } @else {
+    display: flex;
+  }
   justify-content: center;
   align-items: center;
 }
