@@ -1,3 +1,6 @@
 import SassExample from './SassExample';
+import ButtonGroup from './ButtonsExample';
 
-export default SassExample
+// const exportable = {SassExample, ButtonGroup}
+
+export {SassExample, ButtonGroup}
