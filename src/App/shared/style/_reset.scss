@@ -1,0 +1,43 @@
+@import "colors";
+
+// color variables
+:root {
+  // default colors
+  @each $color, $value in $dark {
+    --gray-#{$color}: #{$value};
+  }
+  // default colors
+  @each $color, $value in $colors {
+    --color-#{$color}: #{$value};
+  }
+}
+@import "mixins";
+
+$font: sans-serif;
+$font-size: 16px;
+
+html {
+  box-sizing: border-box;
+  font-family: $font;
+  font-size: $font-size;
+  @include main-color;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body { overflow-x: hidden; }
+
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  margin: 0.2rem;
+  padding: 0.3rem;
+}

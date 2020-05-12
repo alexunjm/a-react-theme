@@ -18,20 +18,20 @@ $deg: 100;
 
 // default color classes
 @each $color, $value in $dark {
-  .color-#{$color} {
+  .gray-#{$color} {
     color: $value;
   }
 }
 
 
-$primary:       #fa54ad;
-$secondary:     map-get($map: $dark, $key: "60");//$gray-60;
+$primary:       #958E95;
+// $secondary:     map-get($map: $dark, $key: "80");
+$secondary:     invert($primary);
 $success:       #54fa86;
 $info:          #54aafa;
 $warning:       #faac54;
 $danger:        #dc3545;
 $light:         map-get($map: $dark, $key: "10");
-$dark:          map-get($map: $dark, $key: "80");//$gray-80;
 
 $colors: (
   "primary":    $primary,
@@ -41,5 +41,5 @@ $colors: (
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark
+  "dark":       $dark-color
 )
