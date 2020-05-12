@@ -1,22 +1,23 @@
 
 // Sistema de colores
 
-$dark:    #000000;
-$white:    #fefefe;
+$dark-color:    #ff1800;
+$light-color:    #fefefe;
 
 // variables para escalas de grises (de 20 en 20)
-$gray-scale-deg: 20;
 
-$gray: ("gray-100": $dark);
+$dark-scale-deg: 10;
+
+$dark: ("100": $dark-color);
 $deg: 100;
 @while $deg > 0 {
-  $gray-scale: darken($white, $deg);
-  $gray: map-merge($gray, (gray-#{$deg}: $gray-scale));
-  $deg: $deg - $gray-scale-deg;
+  $dark-scale: mix($dark-color, $light-color, $deg);
+  $dark: map-merge($dark, (#{$deg}: $dark-scale));
+  $deg: $deg - $dark-scale-deg;
 }
 
-// escala de grises  (color-gray-20, ..., color-gray-100)
-@each $color, $value in $gray {
+// escala de grises  (color-dark-20, ..., color-dark-100)
+@each $color, $value in $dark {
   .color-#{$color} {
     color: $value;
   }
