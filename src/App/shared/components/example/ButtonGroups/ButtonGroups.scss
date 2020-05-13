@@ -1,13 +1,12 @@
-@import "../../../style/colors";
-@import "../../../style/functions";
 @import "../../../style/mixins";
 
 .bodered {
   $borderColor: darkColor("20");
   @include default-border-radius;
-  margin: 0.5rem 2px;
-  padding: 0.5rem;
-  border: 2px solid $borderColor;
+  @include default-content-padding;
+  // border: 2px solid $borderColor;
+  @include border($borderColor);
+  margin: 0.5rem 0;
 }
 
 .groups {
