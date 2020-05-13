@@ -22,6 +22,9 @@ $dark: map-merge($dark, ("0": $light-color));
   .darky-#{$color} {
     color: $value;
   }
+  .darky-bg-#{$color} {
+    background-color: $value;
+  }
 }
 
 

@@ -1,5 +1,26 @@
+@import "../../../style/colors";
+@import "../../../style/functions";
 @import "../../../style/mixins";
 
-.group {
-  @include flex-centered(false);
+.bodered {
+  $borderColor: darkColor("20");
+  @include def-b-rad;
+  margin: 0.5rem 2px;
+  padding: 0.5rem;
+  border: 2px solid $borderColor;
+}
+
+.groups {
+  @extend .bodered;
+
+  &:nth-child(odd) {
+    @extend .darky-bg-30;
+  }
+  & > .group {
+    @include flex-centered(false);
+
+    & > .btn {
+      margin: 0.2rem 0.2rem;
+    }
+  }
 }

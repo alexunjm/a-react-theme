@@ -1,8 +1,8 @@
 .btn {
   @include special-font;
   @include flex-centered;
+  @include def-b-rad;
   font-weight: bold;
-  border-radius: 0.3rem;
   cursor: pointer;
 
   & > button {

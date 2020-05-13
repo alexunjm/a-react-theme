@@ -1,3 +1,10 @@
+@function color($val) {
+  @return map-get($map: $colors, $key: $val);
+}
+
+@function darkColor($val) {
+  @return map-get($map: $dark, $key: $val);
+}
 
 @function contrast($color) {
   $l: lightness($color);
