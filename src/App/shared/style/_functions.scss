@@ -1,3 +1,22 @@
+@import "colors";
+
+@function color($colorName) {
+  @return map-get($map: $colors, $key: $colorName);
+}
+
+@function darkColor($darkScale) {
+  @return map-get($map: $dark, $key: $darkScale);
+}
+
+@function alphaColor($colorName: "primary", $darkScale: false, $alpha: 0.5) {
+  $color: color($colorName);
+
+  @if $darkScale {
+    $color: darkColor($darkScale);
+  }
+
+  @return transparentize($color, $alpha);
+}
 
 @function contrast($color) {
   $l: lightness($color);

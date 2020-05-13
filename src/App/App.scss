@@ -1,2 +1,17 @@
-.root > .App {
+@import "./shared/style/mixins";
+/* 
+#root {
+  @include bg-tile;
+  & > .App {
+    @include bg-tile-over;
+  }
+}
+ */
+body {
+  @include bg-tile;
+  & #root {
+    @include bg-tile-over;
+    @include fixed-full;
+    @include default-overflow;
+  }
 }

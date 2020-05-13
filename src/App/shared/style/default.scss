@@ -3,9 +3,15 @@
 @import "buttons";
 
 html {
-  @include main-color;
+  & > body {
+    @include main-color;
+    @include main-font;
+  }
 }
 
-h2 {
-  color: blue;
+@for $index from 1 through 6 {
+  h#{$index}{
+    @include primary-color;
+    @include title-font;
+  }
 }

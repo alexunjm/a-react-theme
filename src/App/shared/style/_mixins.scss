@@ -1,15 +1,44 @@
 @import "fonts";
+@import "functions";
 
+// Colors
 @mixin main-color {
+  color: map-get($map: $colors, $key: "dark");
+}
+
+@mixin primary-color {
+  color: map-get($map: $colors, $key: "primary");
+}
+
+@mixin secondary-color {
   color: map-get($map: $colors, $key: "secondary");
 }
 
-@mixin important-text {
-  color: $myColor;
-  font-size: 25px;
-  font-weight: bold;;
+@mixin tertiary-color {
+  color: map-get($map: $colors, $key: "tertiary");
 }
 
+
+// Text Style
+@mixin main-font {
+  @include source-sans-pro-font;
+}
+
+@mixin title-font {
+  @include lato-font;
+}
+
+@mixin special-font {
+  @include amaranth-font;
+}
+
+@mixin important-text {
+  @include secondary-color;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+// Layout Style
 @mixin flex-centered($inline: true) {
   @if $inline {
     display: inline-flex;
@@ -18,4 +47,35 @@
   }
   justify-content: center;
   align-items: center;
+}
+
+@mixin default-border-radius {
+  border-radius: 0.3rem;
+}
+
+// Generic
+@mixin bg-tile {
+  background-size: 400px;
+  background-attachment: fixed;
+  background-repeat: round;
+  // background-image: url(/bg-tile.png);
+  background-image: url(/bg-tile2.png);
+  filter: grayscale(50%);
+}
+
+@mixin bg-tile-over {
+  $color1: alphaColor($darkScale: "20", $alpha: 0.2);
+  $color2: alphaColor($darkScale: "50", $alpha: 0.4);
+  // $color2: alphaColor("tertiary");
+  background: linear-gradient(39deg, $color1 0%, $color2 50%, $color1 100%);
+}
+
+@mixin fixed-full {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+@mixin default-overflow {
+  overflow: auto;
 }

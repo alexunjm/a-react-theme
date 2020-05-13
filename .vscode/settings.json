@@ -3,6 +3,10 @@
         {
             "name": "feature/colors",
             "base": "develop"
+        },
+        {
+            "name": "feature/buttons",
+            "base": "develop"
         }
     ]
 }
