@@ -2,9 +2,14 @@
 
 .btn {
   @include amaranth-font;
+  @include flex-centered;
   font-weight: bold;
   border-radius: 0.3rem;
-  @include flex-centered;
+  cursor: pointer;
+
+  & > button {
+    cursor: inherit;
+  }
 
   // default color classes
   @each $color, $value in $colors {

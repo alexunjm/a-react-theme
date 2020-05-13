@@ -1,13 +1,21 @@
 @import "fonts";
 
 @mixin main-color {
+  color: map-get($map: $colors, $key: "dark");
+}
+
+@mixin primary-color {
+  color: map-get($map: $colors, $key: "primary");
+}
+
+@mixin secondary-color {
   color: map-get($map: $colors, $key: "secondary");
 }
 
 @mixin important-text {
-  color: $myColor;
-  font-size: 25px;
-  font-weight: bold;;
+  @include secondary-color;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 @mixin flex-centered($inline: true) {
