@@ -25,7 +25,10 @@ class Example extends React.Component {
   render() {
     return (
       <Content>
-        <h1>Lorem Ipsum</h1>
+        <h1>Lorem ipsum</h1>
+        <h2>Dolor sit amet</h2>
+        <h3>Consectetur adipiscing elit</h3>
+        <h4>Sed do eiusmod</h4>
         <p>{this.state.loremIpsum}</p>
         <ButtonGroup />
         <ButtonGroup outline />

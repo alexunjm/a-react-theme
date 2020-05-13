@@ -11,7 +11,13 @@ html {
 
 @for $index from 1 through 6 {
   h#{$index}{
-    @include color-prop;
+    @if $index % 3 == 0 {
+      @include color-prop("tertiary");
+    } @else if $index % 2 == 0 {
+      @include color-prop("secondary");
+    } @else {
+      @include color-prop;
+    }
     @include title-font;
   }
 }
