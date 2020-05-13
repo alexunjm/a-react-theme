@@ -3,7 +3,7 @@
 body {
   @include bg-tile;
   & #root {
-    @include bg-tile-over;
+    @include bg-gradient-transparent;
     @include fixed-full;
     @include default-overflow;
   }

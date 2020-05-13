@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Content from '../content';
+import AlertStack from './AlertStack/AlertStack';
 import ButtonGroup from './ButtonGroups/ButtonGroups';
 import {SampleTextGenerator} from '../../helpers';
 
@@ -25,6 +26,7 @@ class Example extends React.Component {
   render() {
     return (
       <Content>
+        <AlertStack />
         <h1>Lorem ipsum</h1>
         <h2>Dolor sit amet</h2>
         <h3>Consectetur adipiscing elit</h3>

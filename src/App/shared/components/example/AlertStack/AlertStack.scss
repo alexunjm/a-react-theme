@@ -1,0 +1,13 @@
+@import "../../../style/mixins";
+
+.alert-stack {
+  @include bg-color-prop("light");
+  @include bg-gradient-transparent($darkScale1: "10", $alpha1: 0.6, $darkScale2: "20", $alpha2: 0.8);
+  @include default-border-radius;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  box-sizing: content-box;
+  padding: 0.5rem;
+}

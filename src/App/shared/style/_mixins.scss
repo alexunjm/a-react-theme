@@ -59,12 +59,8 @@
   margin-right: auto;
 }
 
-@mixin default-border-radius {
-  border-radius: 0.3rem;
-}
-
-@mixin default-content-padding {
-  padding: 1rem;
+@mixin default-content-padding($padding: 1rem) {
+  padding: $padding;
 }
 
 @mixin fixed-full {
@@ -90,13 +86,17 @@
   filter: grayscale(50%);
 }
 
-@mixin bg-tile-over {
-  $color1: alphaColor($darkScale: "20", $alpha: 0.2);
-  $color2: alphaColor($darkScale: "50", $alpha: 0.4);
+@mixin bg-gradient-transparent($darkScale1: "20", $alpha1: 0.2, $darkScale2: "50", $alpha2: 0.4) {
+  $color1: alphaColor($darkScale: $darkScale1, $alpha: $alpha1);
+  $color2: alphaColor($darkScale: $darkScale2, $alpha: $alpha2);
   // $color2: alphaColor("tertiary");
   background: linear-gradient(39deg, $color1 0%, $color2 50%, $color1 100%);
 }
 
 @mixin border($color, $width: 2px, $style: solid) {
   border: $width $style $color;
+}
+
+@mixin default-border-radius {
+  border-radius: 0.3rem;
 }

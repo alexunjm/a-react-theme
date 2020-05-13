@@ -1,0 +1,21 @@
+.alert {
+  // @include bg-color-prop;
+  @include default-border-radius;
+  @include default-content-padding(0.5rem);
+  text-align: justify;
+  cursor: pointer;
+
+  // default color classes
+  @each $color, $value in $colors {
+    $contrast: adjust-color($value, $saturation: 30, $lightness: 30);
+    $value: darken($value, 15);
+    &.alert-#{$color} {
+      background-color: $contrast;
+      color: $value;
+    }
+  }
+
+  &.alert-light {
+    @include main-color;
+  }
+}
