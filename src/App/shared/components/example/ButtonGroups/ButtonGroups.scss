@@ -4,7 +4,7 @@
 
 .bodered {
   $borderColor: darkColor("20");
-  @include def-b-rad;
+  @include default-border-radius;
   margin: 0.5rem 2px;
   padding: 0.5rem;
   border: 2px solid $borderColor;
