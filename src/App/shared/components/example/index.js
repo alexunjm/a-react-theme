@@ -12,7 +12,7 @@ class Example extends React.Component {
   componentDidMount() {
     SampleTextGenerator.get()
     .then(text  => {
-      console.log({text, now: Date.now()});
+      // console.log({text, now: Date.now()});
       this.updateLoremIpsum(text)
     })
   }
