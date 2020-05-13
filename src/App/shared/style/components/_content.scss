@@ -1,5 +1,6 @@
 .content {
   // @include block-centered(500px);
   @include block-centered;
-  background: var(--color-light);
+  @include default-content-padding;
+  @include bg-color-prop("light");
 }
