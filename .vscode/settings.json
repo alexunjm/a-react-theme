@@ -7,6 +7,10 @@
         {
             "name": "feature/buttons",
             "base": "develop"
+        },
+        {
+            "name": "feature/layout",
+            "base": "develop"
         }
     ]
 }

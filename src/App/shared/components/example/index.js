@@ -1,5 +1,6 @@
 import React from 'react'
-// import SassExample from './SassExample';
+
+import Content from '../content';
 import ButtonGroup from './ButtonGroups/ButtonGroups';
 import {SampleTextGenerator} from '../../helpers';
 
@@ -23,12 +24,12 @@ class Example extends React.Component {
 
   render() {
     return (
-      <div>
+      <Content>
         <h1>Lorem Ipsum</h1>
         <p>{this.state.loremIpsum}</p>
         <ButtonGroup />
         <ButtonGroup outline />
-      </div>
+      </Content>
     )
   }
 }

@@ -1,0 +1,5 @@
+.content {
+  // @include block-centered(500px);
+  @include block-centered;
+  background: var(--color-light);
+}

@@ -1,6 +1,7 @@
 @import "reset";
 @import "functions";
-@import "buttons";
+@import "components/buttons";
+@import "components/content";
 
 html {
   & > body {
@@ -11,7 +12,7 @@ html {
 
 @for $index from 1 through 6 {
   h#{$index}{
-    @include primary-color;
+    @include color-prop;
     @include title-font;
   }
 }
