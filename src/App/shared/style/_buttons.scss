@@ -1,7 +1,5 @@
-
-
 .btn {
-  @include amaranth-font;
+  @include tertiary-font;
   @include flex-centered;
   font-weight: bold;
   border-radius: 0.3rem;
@@ -9,6 +7,9 @@
 
   & > button {
     cursor: inherit;
+    &:focus {
+      outline: none;
+    }
   }
 
   // default color classes

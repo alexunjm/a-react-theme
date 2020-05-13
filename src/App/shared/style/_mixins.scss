@@ -1,5 +1,6 @@
 @import "fonts";
 
+// Colors
 @mixin main-color {
   color: map-get($map: $colors, $key: "dark");
 }
@@ -12,12 +13,31 @@
   color: map-get($map: $colors, $key: "secondary");
 }
 
+@mixin tertiary-color {
+  color: map-get($map: $colors, $key: "tertiary");
+}
+
+
+// Text Style
+@mixin primary-font {
+  @include source-sans-pro-font;
+}
+
+@mixin secondary-font {
+  @include lato-font;
+}
+
+@mixin tertiary-font {
+  @include amaranth-font;
+}
+
 @mixin important-text {
   @include secondary-color;
   font-size: 1.2rem;
   font-weight: bold;
 }
 
+// Layout Style
 @mixin flex-centered($inline: true) {
   @if $inline {
     display: inline-flex;

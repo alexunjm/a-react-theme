@@ -1,6 +1,6 @@
 import React from 'react'
-import SassExample from './SassExample';
-import ButtonGroup from './ButtonsExample';
+// import SassExample from './SassExample';
+import ButtonGroup from './ButtonGroups/ButtonGroups';
 import {SampleTextGenerator} from '../../helpers';
 
 class Example extends React.Component {
@@ -32,4 +32,4 @@ class Example extends React.Component {
     )
   }
 }
-export {SassExample, ButtonGroup, Example}
+export {ButtonGroup, Example}
