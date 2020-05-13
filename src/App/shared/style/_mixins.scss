@@ -19,15 +19,15 @@
 
 
 // Text Style
-@mixin primary-font {
+@mixin main-font {
   @include source-sans-pro-font;
 }
 
-@mixin secondary-font {
+@mixin title-font {
   @include lato-font;
 }
 
-@mixin tertiary-font {
+@mixin special-font {
   @include amaranth-font;
 }
 

@@ -20,11 +20,6 @@ html {
   box-sizing: border-box;
   font-family: $font;
   font-size: $font-size;
-
-  & > body {
-    @include main-color;
-    @include primary-font;
-  }
 }
 
 *,
