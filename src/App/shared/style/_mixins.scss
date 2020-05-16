@@ -60,11 +60,13 @@
  */
  
 @mixin main-font {
-  @include source-sans-pro-font;
+  // @include lato-font;
+  @include muli-font;
 }
 
 @mixin title-font {
-  @include lato-font;
+  // @include muli-font;
+  @include amaranth-font;
 }
 
 @mixin special-font {

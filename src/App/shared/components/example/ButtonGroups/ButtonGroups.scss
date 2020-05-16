@@ -1,16 +1,12 @@
 @import "../../../style/mixins";
 
-.bodered {
+.groups {
   $borderColor: darkColor("20");
   @include default-border-radius;
   @include content-padding;
   // border: 2px solid $borderColor;
   @include border($borderColor);
   margin: 0.5rem 0;
-}
-
-.groups {
-  @extend .bodered;
 
   &:nth-child(odd) {
     @extend .darky-bg-30;

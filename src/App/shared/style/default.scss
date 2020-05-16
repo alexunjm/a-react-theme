@@ -10,15 +10,33 @@ html {
   }
 }
 
+$h_grow_rate: 0.75;
+$sizes: 6;
 @for $index from 1 through 6 {
+  $priority: $sizes - $index;
+  $font_rate: $h_grow_rate * ($priority / $sizes);
+  $h_font_size: ($font-size * (1 + $font_rate)) + ceil($priority / 3);
+
   h#{$index}{
     @if $index % 3 == 0 {
       @include color-prop("tertiary");
+      @if $index == 6 {
+        font-style: italic;
+        font-weight: bold;
+      }
     } @else if $index % 2 == 0 {
       @include color-prop("secondary");
+      font-weight: normal;
     } @else {
       @include color-prop;
+      @if $index == 1 {
+        font-weight: bold;
+      } @else if $index == 5 {
+        font-weight: normal;
+      }
     }
     @include title-font;
+    margin: 1.5em 0 1rem;
+    font-size: ceil($h_font_size);
   }
 }

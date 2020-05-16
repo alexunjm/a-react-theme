@@ -28,11 +28,16 @@ class Example extends React.Component {
       <Container>
         <AlertStack />
         <h1>Lorem ipsum</h1>
+        <p>{this.state.loremIpsum}</p>
         <h2>Dolor sit amet</h2>
+        <p>{this.state.loremIpsum}</p>
         <h3>Consectetur adipiscing elit</h3>
+        <p>{this.state.loremIpsum}</p>
         <h4>Sed do eiusmod</h4>
         <p>{this.state.loremIpsum}</p>
+        <h5>Buttons</h5>
         <ButtonGroup />
+        <h6>Buttons outline</h6>
         <ButtonGroup outline />
       </Container>
     )
