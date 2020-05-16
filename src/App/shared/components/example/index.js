@@ -26,7 +26,7 @@ class Example extends React.Component {
   render() {
     return (
       <Container>
-        <AlertStack />
+        {/* <AlertStack /> */}
         <section>
           <h1>Lorem ipsum</h1>
           <p>{this.state.loremIpsum}</p>
