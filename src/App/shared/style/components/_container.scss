@@ -5,5 +5,12 @@
 
   & > section {
     padding: 1rem 4rem 1px;
+
+    @include for-phone-only {    
+      padding: 1rem 10vw 1px;
+    }
+    @include for-small-screen-phone-only {
+      padding: 1rem 7vw 1px;
+    }
   }
 }
