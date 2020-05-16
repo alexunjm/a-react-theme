@@ -2,4 +2,8 @@
   @include block-centered(900px);
   @include bg-color-prop("light");
   padding: 1px 1rem;
+
+  & > section {
+    padding: 1rem 4rem 1px;
+  }
 }

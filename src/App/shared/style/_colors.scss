@@ -28,18 +28,22 @@ $dark: map-merge($dark, ("0": $light-color));
 }
 
 
-$primary:       #875454;
+$primary:       hsl(0, 33%, 43%);
 // $secondary:     map-get($map: $dark, $key: "80");
 // $secondary:     invert($primary);
-$secondary:     #875487;
-$tertiary:      #a8346a;
-$success:       hsl(120, 23%, 43%);
-$info:          hsl(190, 23%, 43%);
-$warning:       hsl(50, 63%, 43%);
-$danger:        hsl(354, 43%, 43%);
+// $secondary:     hsl(300, 43%, 68%);
+// $tertiary:      hsl(332, 53%, 73%);
+$secondary:     complement($primary);
+$tertiary:      adjust-hue($secondary, 60deg);
+$tertiary:      desaturate($tertiary, 10);
+// $tertiary:      hsl(240, 39%, 59%);
+$success:       hsl(120, 69%, 33%);
+$info:          hsl(190, 77%, 38%);
+$warning:       hsl(8, 80%, 57%);
+$danger:        hsl(0, 100%, 50%);
 // $light:         map-get($map: $dark, $key: "10");
 $light:         $light-color;
-/* 
+
 $colors: (
   "primary":    $primary,
   "secondary":  $secondary,
@@ -51,8 +55,9 @@ $colors: (
   "light":      $light,
   "dark":       $dark-color
 )
- */
+
 // design template
+/* 
 $colors: (
   "primary":    grayscale($primary),
   "secondary":  grayscale($secondary),
@@ -63,4 +68,4 @@ $colors: (
   "danger":     grayscale($danger),
   "light":      grayscale($light),
   "dark":       grayscale($dark-color)
-)
+) */

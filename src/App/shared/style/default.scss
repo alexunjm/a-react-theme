@@ -36,7 +36,8 @@ $sizes: 6;
       }
     }
     @include title-font;
-    margin: 1.5em 0 1rem;
+    margin-top: 2em;
+    margin-bottom: 1rem;
     font-size: ceil($h_font_size);
   }
 }

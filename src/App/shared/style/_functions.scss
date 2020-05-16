@@ -31,8 +31,9 @@
 
 @function contrast($color) {
   $l: lightness($color);
+  $s: saturation($color);
   // font-size: $l;
-  @if $l > 49% {
+  @if $l > 55% and $s < $l {
     $color: map-get($map: $colors, $key: "dark");
   } @else {
     $color: map-get($map: $colors, $key: "light");
