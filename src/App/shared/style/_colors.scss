@@ -39,7 +39,7 @@ $warning:       hsl(50, 63%, 43%);
 $danger:        hsl(354, 43%, 43%);
 // $light:         map-get($map: $dark, $key: "10");
 $light:         $light-color;
-
+/* 
 $colors: (
   "primary":    $primary,
   "secondary":  $secondary,
@@ -50,4 +50,17 @@ $colors: (
   "danger":     $danger,
   "light":      $light,
   "dark":       $dark-color
+)
+ */
+// design template
+$colors: (
+  "primary":    grayscale($primary),
+  "secondary":  grayscale($secondary),
+  "tertiary":   grayscale($tertiary),
+  "success":    grayscale($success),
+  "info":       grayscale($info),
+  "warning":    grayscale($warning),
+  "danger":     grayscale($danger),
+  "light":      grayscale($light),
+  "dark":       grayscale($dark-color)
 )
