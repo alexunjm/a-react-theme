@@ -1,7 +1,7 @@
 .alert {
   // @include bg-color-prop;
   @include default-border-radius;
-  @include default-content-padding(0.5rem);
+  @include content-padding(0.5rem);
   text-align: justify;
   cursor: pointer;
   margin-top: 0.5rem;

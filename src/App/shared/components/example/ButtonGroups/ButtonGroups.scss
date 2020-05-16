@@ -3,7 +3,7 @@
 .bodered {
   $borderColor: darkColor("20");
   @include default-border-radius;
-  @include default-content-padding;
+  @include content-padding;
   // border: 2px solid $borderColor;
   @include border($borderColor);
   margin: 0.5rem 0;

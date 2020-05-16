@@ -1,0 +1,5 @@
+.container {
+  @include block-centered(900px);
+  @include bg-color-prop("light");
+  padding: 1rem;
+}
