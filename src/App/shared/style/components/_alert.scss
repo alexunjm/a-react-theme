@@ -4,10 +4,13 @@
   @include default-content-padding(0.5rem);
   text-align: justify;
   cursor: pointer;
+  margin-top: 0.5rem;
 
   // default color classes
   @each $color, $value in $colors {
-    $contrast: adjust-color($value, $saturation: 30, $lightness: 30);
+    // $contrast: adjust-color($value, $saturation: 30, $lightness: 30);
+    $contrast: lighten($value, 30);
+    // $contrast: saturate($contrast, 30);
     $value: darken($value, 15);
     &.alert-#{$color} {
       background-color: $contrast;
